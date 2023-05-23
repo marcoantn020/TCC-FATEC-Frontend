@@ -182,3 +182,40 @@ button {
   align-items: center;
   gap: 1.2em;
 }
+
+.actions {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  margin-top: 1em;
+}
+
+.actions button {
+  background-color: #ccc;
+  border: 1px solid black;
+  color: black;
+  transition: 1s;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .75em;
+}
+
+.actions button svg {
+  font-weight: bold;
+}
+
+.actions button:first-child {
+  background-color: #eee !important;
+  color: black;
+}
+
+.actions button:last-child {
+  background-color: rgb(26, 139, 26);
+  color: white;
+}
+
+.actions button:hover {
+  opacity: .6;
+}

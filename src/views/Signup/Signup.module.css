@@ -20,34 +20,3 @@
 
 }
 
-.actions {
-  display: flex;
-  flex-direction: row;
-  gap: 1em;
-  margin-top: 1em;
-}
-
-button {
-  background-color: #ccc;
-  border: 1px solid black;
-  color: black;
-  transition: 1s;
-  border: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: .75em;
-}
-
-button svg {
-  font-weight: bold;
-}
-
-button:last-child {
-  background-color: rgb(26, 139, 26);
-  color: white;
-}
-
-button:hover {
-  opacity: .6;
-}

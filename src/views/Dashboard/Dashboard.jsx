@@ -15,7 +15,6 @@ const Dashboard = () => {
     })
     .catch(e => console.log(e))
   }, [])
-  console.log(userData);
 
   const getAge = (dateBith) => {
     if(!dateBith) return
@@ -30,7 +29,7 @@ const Dashboard = () => {
       <div className={styles.header}>
         <h2>Meu perfil</h2>
         <div className={styles.menu}>
-          <Link to="#">Editar</Link>
+          <Link to={`/user/edit`}>Editar</Link>
           <Link to="#">Atualizar senha</Link>
         </div> {/* menu */}
       </div> {/* header */}
@@ -55,7 +54,7 @@ const Dashboard = () => {
 
         <div className={styles.box}>
           <span> <b>Cidade:</b> city</span>
-          <span> <b>Rua:</b> {userData?.street} {userData?.number}</span>
+          <span> <b>Rua:</b> {userData?.street}, <b>nº</b> {userData?.number}</span>
         </div> {/* box */}
 
         <div className={styles.box}>

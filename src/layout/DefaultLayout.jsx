@@ -21,7 +21,7 @@ const DefaultLayout = () => {
       <header>
         <SideBar />
       </header>
-    
+
       <div className="container">
         <div className='mini-header'>
           {user.name ? <span>{user.name}</span> : 'Sem Nome'} &nbsp;
