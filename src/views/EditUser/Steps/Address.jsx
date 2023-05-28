@@ -10,7 +10,7 @@ const Address = ({data, updateFieldHandler, userDataCurrent}) => {
           <input 
             required
             type="text"
-            value={userDataCurrent.zipcode ? userDataCurrent.zipcode : data.zipcode}
+            defaultValue={data?.zipcode ? data.zipcode : userDataCurrent?.zipcode}
             onChange={(e) => updateFieldHandler("zipcode", e.target.value)} 
             name="zipcode"
             id="zipcode"
@@ -22,7 +22,7 @@ const Address = ({data, updateFieldHandler, userDataCurrent}) => {
         <input
           required
           type="text"
-          value={userDataCurrent.city ? userDataCurrent.city : data.city}
+          defaultValue={data?.city ? data.city : userDataCurrent?.city}
           onChange={(e) => updateFieldHandler("city", e.target.value)} 
           name="city"
           id="city"
@@ -34,7 +34,7 @@ const Address = ({data, updateFieldHandler, userDataCurrent}) => {
       <input
         required
         type="text"
-        value={userDataCurrent.district ? userDataCurrent.district : data.district}
+        defaultValue={data?.district ? data.district : userDataCurrent?.district}
         onChange={(e) => updateFieldHandler("district", e.target.value)} 
         name="district"
         id="district"
@@ -46,7 +46,7 @@ const Address = ({data, updateFieldHandler, userDataCurrent}) => {
         <input 
           required
           type="text"
-          value={userDataCurrent.street ? userDataCurrent.street : data.street}
+          defaultValue={data?.street ? data.street : userDataCurrent?.street}
           onChange={(e) => updateFieldHandler("street", e.target.value)} 
           name="street"
           id="street"
@@ -58,7 +58,7 @@ const Address = ({data, updateFieldHandler, userDataCurrent}) => {
         <input
           required 
           type="text"
-          value={userDataCurrent.number ? userDataCurrent.number : data.number}
+          defaultValue={data?.number ? data.number : userDataCurrent?.number}
           onChange={(e) => updateFieldHandler("number", e.target.value)} 
           name="number"
           id="number"

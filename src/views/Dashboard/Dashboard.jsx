@@ -36,7 +36,7 @@ const Dashboard = () => {
 
       <div className={styles.container}>
         <div className={styles.box}>
-          <span> <b>Nome:</b> {userData?.name} {userData?.last_name}</span>
+          <span> <b>Nome:</b> {userData?.first_name} {userData?.last_name}</span>
         </div> {/* box */}
 
         <div className={styles.box}>
