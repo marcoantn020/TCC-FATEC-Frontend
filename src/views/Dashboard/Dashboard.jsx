@@ -30,7 +30,7 @@ const Dashboard = () => {
         <h2>Meu perfil</h2>
         <div className={styles.menu}>
           <Link to={`/user/edit`}>Editar</Link>
-          <Link to="#">Atualizar senha</Link>
+          <Link to="/update/password">Atualizar senha</Link>
         </div> {/* menu */}
       </div> {/* header */}
 

@@ -6,6 +6,7 @@ import EditUser from "./views/EditUser/EditUser";
 import Login from "./views/Login/Login";
 import Notfound from "./views/Notfound/Notfound";
 import Signup from "./views/Signup/Signup";
+import UpdatePassword from "./views/UpdatePassword/UpdatePassword";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
       {
         path: '/user/edit',
         element: <EditUser />
+      },
+      {
+        path: '/update/password',
+        element: <UpdatePassword />
       }
     ]
   },
