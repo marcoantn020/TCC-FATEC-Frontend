@@ -4,7 +4,7 @@ import SideBar from '../component/SideBar/SideBar'
 import { useStateContext } from '../context/ContextProvider'
 
 const DefaultLayout = () => {
-  const {token, user, notification} = useStateContext()
+  const {token, user, notification, notificationError} = useStateContext()
 
   if (!token) {
     return <Navigate to="/login"/>
@@ -35,6 +35,11 @@ const DefaultLayout = () => {
       {notification && 
       <div className='popup'>
         {notification}
+      </div>}
+
+      {notificationError && 
+      <div className='popup-error'>
+        {notificationError}
       </div>}
     </main>
   )

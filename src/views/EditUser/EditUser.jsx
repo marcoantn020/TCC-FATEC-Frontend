@@ -10,13 +10,18 @@ import axiosClient from '../../axios-client'
 import { useStateContext } from '../../context/ContextProvider'
 
 const formData = {
-  first_name: "",
-  last_name: "",
-  birth_date: "",
-  email: "",
-  genre: "",
-  practice_activity: "",
-  what_activity: "",
+  "first_name": "",
+  "last_name": "",
+  "birth_date": "",
+  "email": "",
+  "genre": "",
+  "zipcode": "",
+  "city": "",
+  "street": "",
+  "number": "",
+  "district": "",
+  "practice_activity": "",
+  "what_activity": ""
 }
 
 const EditUser = () => {
@@ -27,7 +32,6 @@ const EditUser = () => {
   useEffect(() => {
     axiosClient.get('/patient/logged')
     .then((data) => {
-      console.log(data.data);
       setUserData(data.data)
     })
     .catch(e => console.log(e))
@@ -54,7 +58,6 @@ const EditUser = () => {
   const handleSubmit = (ev) => {
     ev.preventDefault()
     
-    console.log(data)
     axiosClient.put("/patient/update", data)
       .then(() => {
         setNotification("Dados Atualizados com sucesso.")

@@ -7,7 +7,8 @@ const SideBar = () => {
   return (
     <div className={styles.SideBar}>
           <Link to="/dashboard">Dashboard</Link>
-          <Link to="/users">Users</Link>
+          <Link to="/agendar">Agendar</Link>
+          <Link to="/meus-agendametos">Meus Agendamentos</Link>
     </div>
   )
 }

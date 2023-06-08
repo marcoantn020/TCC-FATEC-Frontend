@@ -2,6 +2,11 @@ import React from 'react'
 import { VscCalendar, VscMail } from "react-icons/vsc";
 
 const DataGeneral = ({data, updateFieldHandler, userDataCurrent}) => {
+  
+  if(!data) {
+    return (<p>Carregando...</p>)
+  }
+
   return (
     <>
       <br />
@@ -65,7 +70,7 @@ const DataGeneral = ({data, updateFieldHandler, userDataCurrent}) => {
               <input  
                 type="radio" 
                 defaultChecked={data?.genre === "F" ? true : userDataCurrent?.genre === "F" && true }
-                onChange={(e) => updateFieldHandler("genre", e.target.value)} 
+                onChange={(e) => updateFieldHandler("genre", e.target.value)}
                 name="genre" value="F" /> <span>Feminino</span> </label>
           </div>
       </div>

@@ -1,0 +1,52 @@
+.Calendar {
+  width: 100%;
+  padding: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.section {
+  width: 40%;
+}
+
+.aside {
+  width: 60%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.aside form > div {
+  display: flex;
+  flex-direction: row;
+  gap: .75em;
+}
+
+form {
+  padding-top: 1em;
+}
+
+form  input {
+  width: 10em;
+  height: 2.2em;
+  border: none;
+  border: 1px solid #333;
+  border-radius: 3px;
+  padding-left: .4
+}
+
+.info {
+  padding: 1em;
+  margin-top: 2em;
+}
+
+.info > p {
+  padding: 1em;
+  border: 1px solid red;
+  border-radius: 5px;
+  color: rgb(54, 52, 52);
+}
+
+form button {
+  width: 21em;
+}

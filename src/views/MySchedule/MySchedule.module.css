@@ -1,0 +1,25 @@
+.MySchedule {
+  width: 100%;
+  padding: 1em;
+}
+
+.containerButton {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.2em;
+  border-bottom: 1px solid #333;
+  padding-bottom: 1em;
+}
+
+.containerButton button {
+  width: 15em;
+}
+
+.containerButton span {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: .4em;
+}

@@ -73,6 +73,14 @@ input:focus {
   width: 90%;
   margin: .8em auto;
   background: rgb(250, 67, 67);
+  padding-left: .75em;
+}
+
+.success {
+  width: 90%;
+  margin: .8em auto;
+  background: rgb(79, 228, 79);
+  padding-left: .75em;
 }
 
 .error > p {
@@ -91,6 +99,23 @@ input:focus {
   max-width: 20em;
   width: 15em;
   color: #333;
+  font-weight: bold;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2em;
+}
+
+.popup-error {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: rgb(255, 3, 36);
+  height: 3em;
+  max-width: 20em;
+  width: 15em;
+  color: #fff;
   font-weight: bold;
   border-radius: 5px;
   display: flex;
