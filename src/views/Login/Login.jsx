@@ -50,7 +50,7 @@ const Login = () => {
 
           <div className="formControl">
             <span className="pi pi-lock" style={{ fontSize: '1.2em'}}></span>
-            <input ref={passwordRef} type="text" name='password' placeholder='senha'/>
+            <input ref={passwordRef} type="password" name='password' placeholder='senha'/>
           </div>
 
           <button>Login</button>

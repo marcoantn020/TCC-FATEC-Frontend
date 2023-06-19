@@ -1,10 +1,12 @@
 import React from 'react'
+import { useState } from 'react'
 import { Navigate, Outlet } from 'react-router-dom'
 import SideBar from '../component/SideBar/SideBar'
 import { useStateContext } from '../context/ContextProvider'
 
 const DefaultLayout = () => {
   const {token, user, notification, notificationError} = useStateContext()
+  const [name] = useState(user?.name)
 
   if (!token) {
     return <Navigate to="/login"/>
@@ -24,7 +26,7 @@ const DefaultLayout = () => {
 
       <div className="container">
         <div className='mini-header'>
-          {user.name ? <span>{user.name}</span> : 'Sem Nome'} &nbsp;
+          {name ? <span>{name}</span> : 'Sem Nome'} &nbsp;
           <span onClick={onLogout} >Logout</span>
         </div>
         <div>

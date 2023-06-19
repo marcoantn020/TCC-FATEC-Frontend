@@ -1,7 +1,7 @@
 import React from 'react'
 import { useEffect } from 'react'
 import { useState } from 'react'
-import axiosClient from '../../axios-client'
+import axiosClient from '../../../axios-client';
 import styles from './MySchedule.module.css'
 
 const MySchedule = () => {

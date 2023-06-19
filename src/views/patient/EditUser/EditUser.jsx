@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react'
-import { useForm } from '../../hooks/userForm'
+import { useForm } from '../../../hooks/userForm'
 import StepByStep from './Steps/StepByStep'
 import Address from './Steps/Address'
 import DataGeneral from './Steps/DataGeneral'
 import styles from './EditUser.module.css'
 import { GrFormNext, GrFormPrevious } from 'react-icons/gr'
 import { FiSend } from 'react-icons/fi'
-import axiosClient from '../../axios-client'
-import { useStateContext } from '../../context/ContextProvider'
+import axiosClient from '../../../axios-client';
+import { useStateContext } from '../../../context/ContextProvider'
+import { useNavigate } from 'react-router-dom'
 
 const formData = {
   "first_name": "",
@@ -25,6 +26,7 @@ const formData = {
 }
 
 const EditUser = () => {
+  const navigate = useNavigate()
   const [userData, setUserData] =  useState()
   const [data, setData] =useState(formData)
 
@@ -61,6 +63,7 @@ const EditUser = () => {
     axiosClient.put("/patient/update", data)
       .then(() => {
         setNotification("Dados Atualizados com sucesso.")
+        navigate("/")
       }).catch((err) => {
         console.log(err);
       })

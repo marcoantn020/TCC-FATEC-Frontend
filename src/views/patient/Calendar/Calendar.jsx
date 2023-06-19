@@ -4,8 +4,8 @@ import { Calendar as PrimeCalendar } from 'primereact/calendar';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import styles from "./Calendar.module.css"
-import axiosClient from '../../axios-client';
-import { useStateContext } from '../../context/ContextProvider';
+import axiosClient from '../../../axios-client';
+import { useStateContext } from '../../../context/ContextProvider';
 
 const Calendar = () => {
 
@@ -68,7 +68,6 @@ const Calendar = () => {
     })
     .catch((err) => {
       const response = err.response;
-      console.log(response);
       if (response && response.status === 400) {
         messageError(response.data.detail)
       } 

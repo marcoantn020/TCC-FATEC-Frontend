@@ -2,7 +2,7 @@ import React from 'react'
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import styles from './Dashboard.module.css'
-import axiosClient from '../../axios-client'
+import axiosClient from '../../../axios-client';
 import { useState } from 'react'
 
 const Dashboard = () => {

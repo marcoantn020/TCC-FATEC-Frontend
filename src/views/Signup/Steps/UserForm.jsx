@@ -21,7 +21,7 @@ const UserForm = ({data, updateFieldHandler}) => {
           <VscLock fontSize={"1.2em"} />
           <input 
             required
-            type="text"
+            type="password"
             value={data.password || ""}
             onChange={(e) => updateFieldHandler("password", e.target.value)}
             name="password"

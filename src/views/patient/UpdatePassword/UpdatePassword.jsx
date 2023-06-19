@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { VscLock } from 'react-icons/vsc'
-import axiosClient from '../../axios-client'
+import axiosClient from '../../../axios-client';
 import styles from './UpdatePassword.module.css'
 
 const UpdatePassword = () => {
